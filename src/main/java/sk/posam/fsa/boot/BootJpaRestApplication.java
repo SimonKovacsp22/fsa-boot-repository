@@ -19,8 +19,8 @@ public class BootJpaRestApplication {
 	public CommandLineRunner demo(FilmArchiveService filmArchiveService, DataSource dataSource) {
 		return (args) -> {
 //			System.out.println(dataSource);
-			System.out.println(filmArchiveService.hralHerecVoFilme(142L, 10L));
-			System.out.println(filmArchiveService.hralHerecVoFilme(143L, 10L));
+//			System.out.println(filmArchiveService.hralHerecVoFilme(142L, 10L));
+//			System.out.println(filmArchiveService.hralHerecVoFilme(143L, 10L));
 		};
 	}
 

@@ -19,7 +19,7 @@ public class FilmArchiveServiceImpl implements FilmArchiveService {
     private FilmRepository filmRepository;
 
     @Override
-    @Transactional
+//    @Transactional
     public boolean hralHerecVoFilme(long actorId, long filmId) {
         Actor actor = actorRepository.read(actorId);
         Film film = filmRepository.read(filmId);
