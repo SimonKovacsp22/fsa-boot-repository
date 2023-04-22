@@ -1,4 +1,4 @@
-package sk.posam.fsa.boot.application.repositories;
+package sk.posam.fsa.boot.application.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import sk.posam.fsa.boot.domain.Actor;

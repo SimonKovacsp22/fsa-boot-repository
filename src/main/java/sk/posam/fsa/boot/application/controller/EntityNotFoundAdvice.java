@@ -1,4 +1,4 @@
-package sk.posam.fsa.boot.application.controllers;
+package sk.posam.fsa.boot.application.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

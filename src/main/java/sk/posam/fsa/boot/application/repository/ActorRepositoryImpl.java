@@ -1,4 +1,4 @@
-package sk.posam.fsa.boot.application.repositories;
+package sk.posam.fsa.boot.application.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

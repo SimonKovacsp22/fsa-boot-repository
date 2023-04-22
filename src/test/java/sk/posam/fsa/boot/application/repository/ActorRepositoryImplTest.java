@@ -1,10 +1,7 @@
-package sk.posam.fsa.boot.application.repositories;
+package sk.posam.fsa.boot.application.repository;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import sk.posam.fsa.boot.domain.repositories.ActorRepository;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ActorRepositoryImplTest {
 
