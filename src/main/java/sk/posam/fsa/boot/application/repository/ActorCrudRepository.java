@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ActorCrudRepository extends CrudRepository<Actor, Long> {
     List<Actor> findByLastName(String lastName);
+
+    List<Actor> findByLastNameAndFirstName(String lastName, String firstName);
 }

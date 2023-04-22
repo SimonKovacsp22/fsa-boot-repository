@@ -26,7 +26,7 @@ public class ActorAssembler {
         return result;
     }
 
-    public Actor fromDto(ActorDto dto){
+    public Actor fromDto(ActorDto dto) {
         Actor result = new Actor();
 
         result.setId(dto.id);

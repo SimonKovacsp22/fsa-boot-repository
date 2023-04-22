@@ -8,6 +8,8 @@ import sk.posam.fsa.boot.domain.FilmArchiveService;
 import sk.posam.fsa.boot.domain.repositories.ActorRepository;
 import sk.posam.fsa.boot.domain.repositories.FilmRepository;
 
+import javax.transaction.Transactional;
+
 @Service
 public class FilmArchiveServiceImpl implements FilmArchiveService {
 
@@ -18,7 +20,7 @@ public class FilmArchiveServiceImpl implements FilmArchiveService {
     private FilmRepository filmRepository;
 
     @Override
-//    @Transactional
+    @Transactional
     public boolean hralHerecVoFilme(long actorId, long filmId) {
         Actor actor = actorRepository.read(actorId);
         Film film = filmRepository.read(filmId);
