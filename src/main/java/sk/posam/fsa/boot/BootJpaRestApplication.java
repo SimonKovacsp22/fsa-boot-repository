@@ -4,6 +4,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import sk.posam.fsa.boot.application.repository.ActorCrudRepository;
+import sk.posam.fsa.boot.application.repository.PlayCrudRepository;
 import sk.posam.fsa.boot.domain.FilmArchiveService;
 
 import javax.sql.DataSource;
@@ -16,11 +18,12 @@ public class BootJpaRestApplication {
     }
 
     @Bean
-    public CommandLineRunner demo(FilmArchiveService filmArchiveService, DataSource dataSource) {
+    public CommandLineRunner demo(FilmArchiveService filmArchiveService, DataSource dataSource, PlayCrudRepository playRepository, ActorCrudRepository actorRepository) {
         return (args) -> {
-//			System.out.println(dataSource);
-            System.out.println(filmArchiveService.hralHerecVoFilme(142L, 10L));
-//			System.out.println(filmArchiveService.hralHerecVoFilme(143L, 10L));
+
+
+
+
         };
     }
 

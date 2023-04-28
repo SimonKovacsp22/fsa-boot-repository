@@ -15,11 +15,23 @@ public class Actor {
     @Column(name = "actor_id")
     private Long id;
 
+    public Actor(String firstName, String lastName,Date lastUpdated) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.lastUpdated = lastUpdated;
+    }
+
+    public Actor() {
+    }
+
     @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
+
+    @ManyToMany(mappedBy = "actors",fetch = FetchType.EAGER)
+    private Set<Play> plays;
 
     @ManyToMany(mappedBy = "actors")
     private Set<Film> films;
@@ -45,6 +57,16 @@ public class Actor {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public Set<Play> getPlays() {
+        return plays;
+    }
+
+    public void addPlay(Play play) {
+        if(!plays.contains(play)){
+            plays.add(play);
+        }
     }
 
     public void setLastName(String lastName) {

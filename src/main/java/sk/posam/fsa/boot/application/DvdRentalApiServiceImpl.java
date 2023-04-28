@@ -33,7 +33,7 @@ class DvdRentalApiServiceImpl implements DvdRentalApiService {
     public ActorDto getActorById(Long id) {
         Optional<Actor> actor = actorRepository.findById(id);
         return actor.map(actorAssembler::toDto)
-                .orElseThrow(() -> new EntityNotFoundException());
+                .orElseThrow(EntityNotFoundException::new);
     }
 
     @Override

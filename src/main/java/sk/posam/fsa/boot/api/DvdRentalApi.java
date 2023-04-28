@@ -1,6 +1,7 @@
 package sk.posam.fsa.boot.api;
 
 import org.springframework.web.bind.annotation.*;
+import sk.posam.fsa.boot.domain.Play;
 
 import java.util.Collection;
 
@@ -9,6 +10,7 @@ public interface DvdRentalApi {
 
     @GetMapping("/actors/{id}")
     ActorDto one(@PathVariable Long id);
+
 
     //http://localhost:8081/v1/actors?priezvisko=
     @GetMapping("/actors")
@@ -26,5 +28,18 @@ public interface DvdRentalApi {
     //http://localhost:8081/v1/actors/55/hral-vo-filme?filmId=55
     @GetMapping("/actors/{id}/hral-vo-filme")
     boolean hralHerecVoFilme(@PathVariable(name = "id") long actorId, @RequestParam long filmId);
+
+    @GetMapping("/plays/{id}")
+    Play findPlayById(@PathVariable(name ="id") long id);
+
+    @DeleteMapping("/plays")
+    void deletePlayById(@RequestParam long playId);
+
+    @PostMapping("/plays")
+    Play createPlay(@RequestBody PlayDto newPlay);
+
+    @PutMapping("/plays/{id}/actor")
+    void addActorToPlayById(@RequestParam String lastName,@PathVariable(name="id") long playId);
+
 
 }

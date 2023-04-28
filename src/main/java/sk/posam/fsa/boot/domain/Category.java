@@ -1,5 +1,7 @@
 package sk.posam.fsa.boot.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -18,6 +20,9 @@ public class Category {
 
     @Column(name = "last_update")
     private Date lastUpdated;
+    @JsonIgnore
+    @OneToOne(mappedBy = "category")
+    private Play play;
 
     public Long getId() {
         return id;
